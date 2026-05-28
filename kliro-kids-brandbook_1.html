@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KLIRO KIDS — Brandbook</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --pink:#F472B6;--pink-light:#FCD7EC;--pink-dark:#DB2777;
+  --blue:#60A5FA;--blue-light:#DBEAFE;--blue-dark:#2563EB;
+  --dark:#1A1A2E;--gray:#6B7280;--light:#F9FAFB;--white:#FFFFFF;
+  --font-d:'Cormorant Garamond',serif;--font-b:'DM Sans',sans-serif;
+}
+body{font-family:var(--font-b);background:#F2F0EE;color:var(--dark);margin:0;}
+.wrap{max-width:960px;margin:0 auto;padding:0 0 48px;}
+
+/* PAGE */
+.page{background:white;margin-bottom:6px;padding:72px;position:relative;overflow:hidden;}
+.page-dark{background:var(--dark);}
+
+/* COVER */
+.cover{min-height:680px;background:var(--dark);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;}
+.cover-ring1{position:absolute;top:-120px;right:-120px;width:440px;height:440px;border-radius:50%;border:1px solid rgba(244,114,182,0.12);}
+.cover-ring2{position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;border:1px solid rgba(244,114,182,0.08);}
+.cover-ring3{position:absolute;bottom:-100px;left:-100px;width:380px;height:380px;border-radius:50%;border:1px solid rgba(96,165,250,0.12);}
+.cover-eyebrow{font-size:10px;font-weight:300;letter-spacing:6px;color:rgba(255,255,255,0.35);margin-bottom:52px;text-transform:uppercase;}
+.cover-title{font-family:var(--font-d);font-size:clamp(52px,8vw,84px);font-weight:300;letter-spacing:22px;color:white;line-height:1;}
+.cover-sub{font-size:11px;font-weight:200;letter-spacing:16px;color:rgba(255,255,255,0.35);margin-top:10px;margin-bottom:56px;}
+.cover-line{width:48px;height:1px;background:rgba(255,255,255,0.15);margin:0 auto 28px;}
+.cover-doc{font-size:10px;font-weight:300;letter-spacing:4px;color:rgba(255,255,255,0.25);text-transform:uppercase;}
+
+/* SECTION */
+.sec-num{font-family:var(--font-d);font-size:120px;font-weight:300;color:rgba(0,0,0,0.04);position:absolute;top:16px;right:48px;line-height:1;user-select:none;}
+.sec-num-lt{color:rgba(255,255,255,0.05);}
+.sec-tag{font-size:10px;font-weight:300;letter-spacing:5px;color:var(--gray);text-transform:uppercase;margin-bottom:10px;}
+.sec-title{font-family:var(--font-d);font-size:clamp(28px,4vw,42px);font-weight:400;margin-bottom:48px;line-height:1.1;}
+
+/* LOGO GRID */
+.logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.logo-box{border-radius:16px;padding:40px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:200px;cursor:pointer;transition:transform .2s;}
+.logo-box:hover{transform:translateY(-2px);}
+.logo-box-w{background:white;border:1px solid #EDEDED;}
+.logo-box-dk{background:var(--dark);}
+.logo-box-pk{background:var(--pink-light);}
+.logo-box-bl{background:var(--blue-light);}
+.lw-name{font-family:var(--font-d);letter-spacing:10px;}
+.lw-sub{font-size:9px;font-weight:200;letter-spacing:10px;}
+.lb-label{font-size:9px;font-weight:300;letter-spacing:3px;text-transform:uppercase;}
+
+/* DOWNLOAD AREA */
+.dl-area{margin-top:40px;background:#F9FAFB;border-radius:16px;padding:32px;border:1px dashed #E5E7EB;}
+.dl-title{font-size:11px;letter-spacing:4px;font-weight:300;color:var(--gray);text-transform:uppercase;margin-bottom:20px;}
+.dl-btns{display:flex;flex-wrap:wrap;gap:12px;}
+.dl-btn{display:flex;align-items:center;gap:10px;padding:12px 22px;border-radius:10px;border:1.5px solid #E5E7EB;background:white;cursor:pointer;font-family:var(--font-b);font-size:12px;font-weight:300;color:var(--dark);transition:all .2s;text-decoration:none;}
+.dl-btn:hover{border-color:var(--pink);color:var(--pink);transform:translateY(-1px);box-shadow:0 4px 16px rgba(244,114,182,0.15);}
+.dl-btn svg{width:16px;height:16px;flex-shrink:0;}
+.dl-badge{font-size:9px;font-weight:400;padding:2px 8px;border-radius:20px;letter-spacing:1px;}
+.dl-badge-free{background:var(--pink-light);color:var(--pink-dark);}
+
+/* COLORS */
+.col-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+.col-swatch .col-block{height:110px;border-radius:12px;}
+.col-info{padding:12px 0 0;}
+.col-name{font-size:12px;font-weight:400;margin-bottom:3px;}
+.col-hex{font-size:11px;color:var(--gray);font-weight:300;letter-spacing:1px;}
+.col-role{font-size:10px;color:#B0B0B0;font-weight:300;margin-top:2px;}
+.col-grid2{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px;}
+
+/* TYPOGRAPHY */
+.type-row{margin-bottom:36px;border-bottom:1px solid #F3F4F6;padding-bottom:36px;}
+.type-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.type-label{font-size:10px;letter-spacing:4px;font-weight:300;color:var(--gray);text-transform:uppercase;margin-bottom:12px;}
+.type-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;}
+.type-info{font-size:11px;color:#B0B0B0;font-weight:300;text-align:right;line-height:1.9;flex-shrink:0;}
+.td{font-family:var(--font-d);font-size:clamp(36px,5vw,56px);font-weight:300;letter-spacing:4px;line-height:1;}
+.th{font-family:var(--font-d);font-size:clamp(24px,3.5vw,36px);font-weight:400;letter-spacing:2px;}
+.tb{font-family:var(--font-b);font-size:15px;font-weight:300;line-height:1.8;color:#555;}
+.tc{font-family:var(--font-b);font-size:10px;font-weight:300;letter-spacing:5px;text-transform:uppercase;color:var(--gray);}
+
+/* USAGE */
+.use-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+.mock-label{font-size:10px;color:var(--gray);font-weight:300;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+.insta-mock{border-radius:14px;overflow:hidden;background:white;border:1px solid #F0F0F0;}
+.insta-hdr{padding:11px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #F7F7F7;}
+.insta-av{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--blue));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.insta-nm{font-size:11px;font-weight:400;}
+.insta-img{height:160px;background:var(--pink-light);display:flex;align-items:center;justify-content:center;}
+.insta-ft{padding:11px 14px;}
+.insta-lk{font-size:10px;font-weight:400;margin-bottom:4px;}
+.insta-cap{font-size:10px;color:var(--gray);font-weight:300;line-height:1.5;}
+.tag-mock{border-radius:14px;background:white;border:1px solid #F0F0F0;padding:24px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:260px;}
+.tag-card{width:88px;height:124px;background:white;border:1.5px solid #E5E7EB;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;box-shadow:0 4px 18px rgba(0,0,0,0.07);position:relative;}
+.tag-hole{width:8px;height:8px;border-radius:50%;border:1.5px solid #E5E7EB;position:absolute;top:8px;}
+.tag-wm{font-family:var(--font-d);font-size:12px;font-weight:400;letter-spacing:5px;color:var(--dark);}
+.tag-s{font-family:var(--font-b);font-size:7px;font-weight:300;letter-spacing:6px;color:var(--gray);}
+.app-mock{border-radius:14px;background:white;border:1px solid #F0F0F0;padding:24px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:260px;}
+.app-icon-lg{width:76px;height:76px;background:var(--dark);border-radius:18px;display:flex;align-items:center;justify-content:center;}
+.app-icon-sm{width:40px;height:40px;background:var(--dark);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.app-row{display:flex;gap:12px;align-items:center;justify-content:center;}
+
+/* DONTS */
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
+.rule-item{padding:18px 22px;border-radius:10px;border-left:3px solid transparent;margin-bottom:10px;}
+.rule-ok{background:#F0FDF4;border-color:#22C55E;}
+.rule-no{background:#FEF2F2;border-color:#EF4444;}
+.rule-ttl{font-size:11px;font-weight:400;margin-bottom:4px;}
+.rule-sub{font-size:10px;color:var(--gray);font-weight:300;}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .page{padding:36px 24px;}
+  .logo-grid{grid-template-columns:1fr 1fr;gap:12px;}
+  .logo-box{padding:28px 16px;min-height:160px;gap:12px;}
+  .col-grid{grid-template-columns:repeat(3,1fr);}
+  .col-grid2{grid-template-columns:repeat(2,1fr);}
+  .use-grid{grid-template-columns:1fr;}
+  .rules-grid{grid-template-columns:1fr;gap:28px;}
+  .type-meta{flex-direction:column;align-items:flex-start;}
+  .type-info{text-align:left;}
+  .dl-btns{gap:8px;}
+  .dl-btn{padding:10px 16px;font-size:11px;}
+  .sec-num{font-size:80px;right:20px;}
+  .cover{min-height:520px;}
+  .cover-ring1,.cover-ring2,.cover-ring3{display:none;}
+}
+@media(max-width:420px){
+  .col-grid{grid-template-columns:repeat(2,1fr);}
+  .logo-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="cover-ring1"></div><div class="cover-ring2"></div><div class="cover-ring3"></div>
+  <div class="cover-eyebrow">Brand Identity Guidelines</div>
+  <svg id="cover-logo" width="90" height="116" viewBox="-110 -100 220 210" style="margin-bottom:32px;">
+    <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+    <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+    <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="none" stroke="#DB2777" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+    <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+    <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F472B6" opacity="0.5"/>
+    <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#60A5FA" opacity="0.5"/>
+    <ellipse cx="0" cy="32" rx="6.5" ry="60" fill="white"/>
+    <circle cx="0" cy="-22" r="9.5" fill="white"/>
+    <line x1="-5" y1="-30" x2="-28" y2="-70" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="5" y1="-30" x2="28" y2="-70" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="-28" cy="-70" r="7" fill="#F472B6"/>
+    <circle cx="28" cy="-70" r="7" fill="#60A5FA"/>
+  </svg>
+  <div class="cover-title">KLIRO</div>
+  <div class="cover-sub">K I D S</div>
+  <div class="cover-line"></div>
+  <div class="cover-doc">Brand Identity · 2025</div>
+</div>
+
+<!-- 01 LOGO -->
+<div class="page">
+  <div class="sec-num">01</div>
+  <div class="sec-tag">Brand Identity</div>
+  <div class="sec-title">Logo & Icon</div>
+
+  <div class="logo-grid">
+    <!-- White -->
+    <div class="logo-box logo-box-w">
+      <svg width="60" height="78" viewBox="-110 -100 220 210">
+        <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+        <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+        <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="none" stroke="#DB2777" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+        <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+        <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F472B6" opacity="0.5"/>
+        <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#60A5FA" opacity="0.5"/>
+        <ellipse cx="0" cy="32" rx="6.5" ry="60" fill="#1A1A2E"/>
+        <circle cx="0" cy="-22" r="9.5" fill="#1A1A2E"/>
+        <line x1="-5" y1="-30" x2="-28" y2="-70" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="5" y1="-30" x2="28" y2="-70" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="-28" cy="-70" r="7" fill="#F472B6"/>
+        <circle cx="28" cy="-70" r="7" fill="#60A5FA"/>
+      </svg>
+      <div><div class="lw-name" style="color:#1A1A2E;font-size:18px;">KLIRO</div><div class="lw-sub" style="color:#9CA3AF;">KIDS</div></div>
+      <div class="lb-label" style="color:#B0B0B0;">Oq fon</div>
+    </div>
+    <!-- Dark -->
+    <div class="logo-box logo-box-dk">
+      <svg width="60" height="78" viewBox="-110 -100 220 210">
+        <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+        <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+        <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="none" stroke="#DB2777" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+        <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+        <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F472B6" opacity="0.5"/>
+        <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#60A5FA" opacity="0.5"/>
+        <ellipse cx="0" cy="32" rx="6.5" ry="60" fill="white"/>
+        <circle cx="0" cy="-22" r="9.5" fill="white"/>
+        <line x1="-5" y1="-30" x2="-28" y2="-70" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="5" y1="-30" x2="28" y2="-70" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="-28" cy="-70" r="7" fill="#F472B6"/>
+        <circle cx="28" cy="-70" r="7" fill="#60A5FA"/>
+      </svg>
+      <div><div class="lw-name" style="color:white;font-size:18px;">KLIRO</div><div class="lw-sub" style="color:rgba(255,255,255,0.35);">KIDS</div></div>
+      <div class="lb-label" style="color:rgba(255,255,255,0.3);">Qora fon</div>
+    </div>
+    <!-- Pink -->
+    <div class="logo-box logo-box-pk">
+      <svg width="60" height="78" viewBox="-110 -100 220 210">
+        <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="white"/>
+        <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+        <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="white" opacity="0.5"/>
+        <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#93C5FD" opacity="0.5"/>
+        <ellipse cx="0" cy="32" rx="6.5" ry="60" fill="#DB2777"/>
+        <circle cx="0" cy="-22" r="9.5" fill="#DB2777"/>
+        <line x1="-5" y1="-30" x2="-28" y2="-70" stroke="#DB2777" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="5" y1="-30" x2="28" y2="-70" stroke="#DB2777" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="-28" cy="-70" r="7" fill="white"/>
+        <circle cx="28" cy="-70" r="7" fill="#60A5FA"/>
+      </svg>
+      <div><div class="lw-name" style="color:#DB2777;font-size:18px;">KLIRO</div><div class="lw-sub" style="color:rgba(219,39,119,0.45);">KIDS</div></div>
+      <div class="lb-label" style="color:rgba(219,39,119,0.5);">Pushti fon</div>
+    </div>
+    <!-- Blue -->
+    <div class="logo-box logo-box-bl">
+      <svg width="60" height="78" viewBox="-110 -100 220 210">
+        <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+        <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="white"/>
+        <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F9A8D4" opacity="0.5"/>
+        <path d="M7,30 L68,86 L24,94 L7,48Z" fill="white" opacity="0.5"/>
+        <ellipse cx="0" cy="32" rx="6.5" ry="60" fill="#2563EB"/>
+        <circle cx="0" cy="-22" r="9.5" fill="#2563EB"/>
+        <line x1="-5" y1="-30" x2="-28" y2="-70" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="5" y1="-30" x2="28" y2="-70" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="-28" cy="-70" r="7" fill="#F472B6"/>
+        <circle cx="28" cy="-70" r="7" fill="white"/>
+      </svg>
+      <div><div class="lw-name" style="color:#2563EB;font-size:18px;">KLIRO</div><div class="lw-sub" style="color:rgba(37,99,235,0.45);">KIDS</div></div>
+      <div class="lb-label" style="color:rgba(37,99,235,0.5);">Ko'k fon</div>
+    </div>
+  </div>
+
+  <!-- DOWNLOAD -->
+  <div class="dl-area">
+    <div class="dl-title">Logo Yuklash</div>
+    <div class="dl-btns">
+      <button class="dl-btn" onclick="downloadSVG()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/><path d="M4 18h16"/></svg>
+        SVG Format <span class="dl-badge dl-badge-free">Vector</span>
+      </button>
+      <button class="dl-btn" onclick="downloadPNG(512)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/><path d="M4 18h16"/></svg>
+        PNG 512×512 <span class="dl-badge dl-badge-free">Standart</span>
+      </button>
+      <button class="dl-btn" onclick="downloadPNG(1024)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/><path d="M4 18h16"/></svg>
+        PNG 1024×1024 <span class="dl-badge" style="background:#EDE9FE;color:#7C3AED;">HD</span>
+      </button>
+      <button class="dl-btn" onclick="downloadPNG(2048)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/><path d="M4 18h16"/></svg>
+        PNG 2048×2048 <span class="dl-badge" style="background:#D1FAE5;color:#065F46;">4K</span>
+      </button>
+    </div>
+    <div style="margin-top:16px;font-size:10px;color:#C0C0C0;font-weight:300;letter-spacing:1px;">Logo ikonkani bosish orqali yuklab olasiz · Shaffof fon (transparent background)</div>
+  </div>
+</div>
+
+<!-- 02 COLORS -->
+<div class="page">
+  <div class="sec-num">02</div>
+  <div class="sec-tag">Visual Identity</div>
+  <div class="sec-title">Rang Palitra</div>
+  <div class="col-grid">
+    <div class="col-swatch"><div class="col-block" style="background:#F472B6;border-radius:12px;"></div><div class="col-info"><div class="col-name">Primary Pink</div><div class="col-hex">#F472B6</div><div class="col-role">Qiz bola · Asosiy</div></div></div>
+    <div class="col-swatch"><div class="col-block" style="background:#FCD7EC;border-radius:12px;border:1px solid #F5D0E8;"></div><div class="col-info"><div class="col-name">Soft Pink</div><div class="col-hex">#FCD7EC</div><div class="col-role">Fon · Yumshoq</div></div></div>
+    <div class="col-swatch"><div class="col-block" style="background:#60A5FA;border-radius:12px;"></div><div class="col-info"><div class="col-name">Primary Blue</div><div class="col-hex">#60A5FA</div><div class="col-role">O'g'il bola · Asosiy</div></div></div>
+    <div class="col-swatch"><div class="col-block" style="background:#DBEAFE;border-radius:12px;border:1px solid #D0E8FA;"></div><div class="col-info"><div class="col-name">Soft Blue</div><div class="col-hex">#DBEAFE</div><div class="col-role">Fon · Yumshoq</div></div></div>
+    <div class="col-swatch"><div class="col-block" style="background:#1A1A2E;border-radius:12px;"></div><div class="col-info"><div class="col-name">Dark Navy</div><div class="col-hex">#1A1A2E</div><div class="col-role">Matn · Premium</div></div></div>
+  </div>
+  <div class="col-grid2">
+    <div class="col-swatch"><div class="col-block" style="background:#DB2777;height:60px;border-radius:10px;"></div><div class="col-info"><div class="col-name" style="font-size:11px;">Deep Pink</div><div class="col-hex">#DB2777</div></div></div>
+    <div class="col-swatch"><div class="col-block" style="background:#2563EB;height:60px;border-radius:10px;"></div><div class="col-info"><div class="col-name" style="font-size:11px;">Deep Blue</div><div class="col-hex">#2563EB</div></div></div>
+    <div class="col-swatch"><div class="col-block" style="background:#F9FAFB;height:60px;border-radius:10px;border:1px solid #EDEDED;"></div><div class="col-info"><div class="col-name" style="font-size:11px;">Off White</div><div class="col-hex">#F9FAFB</div></div></div>
+    <div class="col-swatch"><div class="col-block" style="background:#6B7280;height:60px;border-radius:10px;"></div><div class="col-info"><div class="col-name" style="font-size:11px;">Neutral Gray</div><div class="col-hex">#6B7280</div></div></div>
+  </div>
+</div>
+
+<!-- 03 TYPOGRAPHY -->
+<div class="page">
+  <div class="sec-num">03</div>
+  <div class="sec-tag">Visual Identity</div>
+  <div class="sec-title">Tipografiya</div>
+  <div class="type-row">
+    <div class="type-label">Display / Logo</div>
+    <div class="type-meta">
+      <div class="td">Kliro Kids</div>
+      <div class="type-info">Cormorant Garamond<br>Weight 300<br>Logo & Cover</div>
+    </div>
+  </div>
+  <div class="type-row">
+    <div class="type-label">Heading</div>
+    <div class="type-meta">
+      <div class="th">Bolalar uchun eng yaxshi</div>
+      <div class="type-info">Cormorant Garamond<br>Weight 400<br>Bo'lim sarlavhalari</div>
+    </div>
+  </div>
+  <div class="type-row">
+    <div class="type-label">Body Text</div>
+    <div class="type-meta">
+      <div class="tb">Har bir bola — oilaning eng qimmatli merosi.<br>Kliro Kids shu sevgi bilan yaratilgan.</div>
+      <div class="type-info">DM Sans<br>Weight 300<br>Tavsiflar · Caption</div>
+    </div>
+  </div>
+  <div class="type-row">
+    <div class="type-label">Label / Tag</div>
+    <div class="type-meta">
+      <div class="tc">Yangi kolleksiya · 2025</div>
+      <div class="type-info">DM Sans<br>Weight 200 · Uppercase<br>Teglar · Yorliqlar</div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 USAGE -->
+<div class="page">
+  <div class="sec-num">04</div>
+  <div class="sec-tag">Application</div>
+  <div class="sec-title">Ishlatilish Joylari</div>
+  <div class="use-grid">
+    <!-- Instagram -->
+    <div>
+      <div class="mock-label">Instagram Post</div>
+      <div class="insta-mock">
+        <div class="insta-hdr">
+          <div class="insta-av">
+            <svg width="16" height="21" viewBox="-110 -100 220 210"><path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="white"/><path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="white"/><ellipse cx="0" cy="32" rx="6" ry="55" fill="white" opacity="0.4"/><circle cx="0" cy="-20" r="8" fill="white" opacity="0.4"/></svg>
+          </div>
+          <div><div class="insta-nm">kliro.kids</div><div style="font-size:9px;color:#9CA3AF;">Toshkent, O'zbekiston</div></div>
+        </div>
+        <div class="insta-img">
+          <svg width="48" height="62" viewBox="-110 -100 220 210">
+            <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+            <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+            <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="none" stroke="#DB2777" stroke-width="2" stroke-linejoin="round" opacity="0.4"/>
+            <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="none" stroke="#2563EB" stroke-width="2" stroke-linejoin="round" opacity="0.4"/>
+            <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F472B6" opacity="0.5"/>
+            <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#60A5FA" opacity="0.5"/>
+            <ellipse cx="0" cy="32" rx="6" ry="58" fill="#1A1A2E"/>
+            <circle cx="0" cy="-22" r="9" fill="#1A1A2E"/>
+            <line x1="-5" y1="-30" x2="-26" y2="-68" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="5" y1="-30" x2="26" y2="-68" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="-26" cy="-68" r="6" fill="#F472B6"/>
+            <circle cx="26" cy="-68" r="6" fill="#60A5FA"/>
+          </svg>
+        </div>
+        <div class="insta-ft">
+          <div class="insta-lk">❤️ 1,204 ta yoqtirish</div>
+          <div class="insta-cap"><strong>kliro.kids</strong> Yangi qishki kolleksiya 🩷💙 #KliroKids #BolalarKiyim</div>
+        </div>
+      </div>
+    </div>
+    <!-- Tag -->
+    <div>
+      <div class="mock-label">Mahsulot Yorlig'i</div>
+      <div class="tag-mock">
+        <div class="tag-card">
+          <div class="tag-hole"></div>
+          <svg width="26" height="34" viewBox="-110 -100 220 210">
+            <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+            <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+            <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F472B6" opacity="0.5"/>
+            <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#60A5FA" opacity="0.5"/>
+            <ellipse cx="0" cy="32" rx="5.5" ry="55" fill="#1A1A2E"/>
+            <circle cx="0" cy="-20" r="8" fill="#1A1A2E"/>
+            <line x1="-4" y1="-27" x2="-22" y2="-62" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="4" y1="-27" x2="22" y2="-62" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="-22" cy="-62" r="5" fill="#F472B6"/>
+            <circle cx="22" cy="-62" r="5" fill="#60A5FA"/>
+          </svg>
+          <div class="tag-wm">KLIRO</div>
+          <div class="tag-s">KIDS</div>
+        </div>
+        <div style="font-size:9px;color:#9CA3AF;text-align:center;line-height:1.7;">Yorliq: 5×7 sm<br>Qog'oz: 300gsm<br>Rangli bosma</div>
+      </div>
+    </div>
+    <!-- App icon -->
+    <div>
+      <div class="mock-label">App Icon & Favicon</div>
+      <div class="app-mock">
+        <div>
+          <div style="font-size:9px;color:#9CA3AF;text-align:center;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">App Icon</div>
+          <div style="display:flex;justify-content:center;">
+            <div class="app-icon-lg">
+              <svg width="42" height="54" viewBox="-110 -100 220 210">
+                <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+                <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+                <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="none" stroke="#DB2777" stroke-width="2" opacity="0.4"/>
+                <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="none" stroke="#2563EB" stroke-width="2" opacity="0.4"/>
+                <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F472B6" opacity="0.5"/>
+                <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#60A5FA" opacity="0.5"/>
+                <ellipse cx="0" cy="32" rx="6" ry="58" fill="white"/>
+                <circle cx="0" cy="-22" r="9" fill="white"/>
+                <line x1="-5" y1="-30" x2="-26" y2="-68" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="5" y1="-30" x2="26" y2="-68" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="-26" cy="-68" r="6" fill="#F472B6"/>
+                <circle cx="26" cy="-68" r="6" fill="#60A5FA"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="app-row">
+          <div>
+            <div style="font-size:9px;color:#9CA3AF;text-align:center;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Favicon</div>
+            <div style="display:flex;justify-content:center;">
+              <div class="app-icon-sm">
+                <svg width="22" height="28" viewBox="-110 -100 220 210">
+                  <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+                  <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+                  <ellipse cx="0" cy="32" rx="6" ry="58" fill="white"/>
+                  <circle cx="0" cy="-22" r="9" fill="white"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 RULES -->
+<div class="page">
+  <div class="sec-num">05</div>
+  <div class="sec-tag">Guidelines</div>
+  <div class="sec-title">Logo Qoidalari</div>
+  <div class="rules-grid">
+    <div>
+      <div class="sec-tag" style="color:#22C55E;margin-bottom:14px;">✓ To'g'ri ishlatish</div>
+      <div class="rule-item rule-ok"><div class="rule-ttl">Oq yoki och fonda ishlatish</div><div class="rule-sub">Logo to'liq ko'rinib turishi kerak</div></div>
+      <div class="rule-item rule-ok"><div class="rule-ttl">Qora fonda oq versiya</div><div class="rule-sub">To'q fonlarda oq rang ishlatiladi</div></div>
+      <div class="rule-item rule-ok"><div class="rule-ttl">Minimal hajm: 32px</div><div class="rule-sub">Undan kichik bo'lmasin</div></div>
+      <div class="rule-item rule-ok"><div class="rule-ttl">Proporsiyani saqlash</div><div class="rule-sub">Cho'zmay, siqmay ishlatish</div></div>
+      <div class="rule-item rule-ok"><div class="rule-ttl">Atrofida bo'sh joy qoldirish</div><div class="rule-sub">Logo hajmining 20% bo'sh joy</div></div>
+    </div>
+    <div>
+      <div class="sec-tag" style="color:#EF4444;margin-bottom:14px;">✗ Noto'g'ri ishlatish</div>
+      <div class="rule-item rule-no"><div class="rule-ttl">Rangini o'zgartirma</div><div class="rule-sub">Faqat belgilangan ranglar ishlatiladi</div></div>
+      <div class="rule-item rule-no"><div class="rule-ttl">Cho'zma yoki siqma</div><div class="rule-sub">Proporsiya buzilmasligi kerak</div></div>
+      <div class="rule-item rule-no"><div class="rule-ttl">Rang foniga qo'yma</div><div class="rule-sub">Ko'rinish pasayib ketadi</div></div>
+      <div class="rule-item rule-no"><div class="rule-ttl">Soya yoki effekt qo'shma</div><div class="rule-sub">Logo sof va toza bo'lishi kerak</div></div>
+      <div class="rule-item rule-no"><div class="rule-ttl">Boshqa font ishlatma</div><div class="rule-sub">Faqat Cormorant Garamond + DM Sans</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="page page-dark" style="padding:28px 72px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+  <div style="display:flex;align-items:center;gap:14px;">
+    <svg width="18" height="23" viewBox="-110 -100 220 210">
+      <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+      <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+      <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F472B6" opacity="0.5"/>
+      <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#60A5FA" opacity="0.5"/>
+      <ellipse cx="0" cy="32" rx="5" ry="55" fill="white"/>
+      <circle cx="0" cy="-20" r="8" fill="white"/>
+    </svg>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:300;letter-spacing:6px;color:white;">KLIRO KIDS</div>
+  </div>
+  <div style="font-size:10px;color:rgba(255,255,255,0.25);font-weight:300;letter-spacing:2px;">Brand Identity Guidelines · 2025</div>
+</div>
+
+</div><!-- /wrap -->
+
+<!-- HIDDEN SVG FOR DOWNLOAD -->
+<svg id="dl-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-110 -100 220 210" style="display:none;">
+  <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="#F472B6"/>
+  <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="#60A5FA"/>
+  <path d="M-7,-14 L-92,-60 L-62,22 L-7,26Z" fill="none" stroke="#DB2777" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+  <path d="M7,-14 L92,-60 L62,22 L7,26Z" fill="none" stroke="#2563EB" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+  <path d="M-7,30 L-68,86 L-24,94 L-7,48Z" fill="#F472B6" opacity="0.5"/>
+  <path d="M7,30 L68,86 L24,94 L7,48Z" fill="#60A5FA" opacity="0.5"/>
+  <ellipse cx="0" cy="32" rx="6.5" ry="60" fill="#1A1A2E"/>
+  <circle cx="0" cy="-22" r="9.5" fill="#1A1A2E"/>
+  <line x1="-5" y1="-30" x2="-28" y2="-70" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="5" y1="-30" x2="28" y2="-70" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="-28" cy="-70" r="7" fill="#F472B6"/>
+  <circle cx="28" cy="-70" r="7" fill="#60A5FA"/>
+</svg>
+
+<script>
+function downloadSVG(){
+  var s=document.getElementById('dl-svg');
+  var ser=new XMLSerializer();
+  var str=ser.serializeToString(s);
+  var blob=new Blob([str],{type:'image/svg+xml'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download='kliro-kids-logo.svg';
+  document.body.appendChild(a);a.click();
+  document.body.removeChild(a);URL.revokeObjectURL(url);
+}
+function downloadPNG(size){
+  var s=document.getElementById('dl-svg');
+  var ser=new XMLSerializer();
+  var str=ser.serializeToString(s);
+  var blob=new Blob([str],{type:'image/svg+xml;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var img=new Image();
+  img.onload=function(){
+    var c=document.createElement('canvas');
+    c.width=size;c.height=size;
+    var ctx=c.getContext('2d');
+    ctx.clearRect(0,0,size,size);
+    ctx.drawImage(img,0,0,size,size);
+    c.toBlob(function(b){
+      var a=document.createElement('a');
+      a.href=URL.createObjectURL(b);
+      a.download='kliro-kids-logo-'+size+'x'+size+'.png';
+      document.body.appendChild(a);a.click();
+      document.body.removeChild(a);
+    },'image/png');
+    URL.revokeObjectURL(url);
+  };
+  img.src=url;
+}
+</script>
+</body>
+</html>
